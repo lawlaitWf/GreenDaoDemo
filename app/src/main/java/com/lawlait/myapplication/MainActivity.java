@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             List<Trade> users = mTradeDao.loadAll();
             String userName = "";
             for (int i = 0; i < users.size(); i++) {
-                userName += users.get(i).getID()+",";
+                userName += users.get(i).getID()+"," +users.get(i).getAmount();
             }
             tv.setText("查询全部数据==>"+userName);
 
